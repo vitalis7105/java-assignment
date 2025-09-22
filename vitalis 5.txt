@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class DiscountCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input purchase amount
+        System.out.print("Enter the purchase amount: ");
+        double amount = sc.nextDouble();
+
+double discountRate = 0.0;
+
+        // Apply rules of discount
+        if (amount > 5000) {
+            discountRate = 0.10;  // 10%
+} else if (amount >= 1000 && amount <= 5000) {
+            discountRate = 0.05;  // 5%
+        } else {
+            discountRate = 0.0;   // No discount
+}
+
+        // Calculate discount and final amount
+        double discount = amount * discountRate;
+        double finalAmount = amount - discount;
+
+        // Display results
+        System.out.println("
+--- Discount Details ---");
+System.out.println("Original Amount: " + amount);
+        System.out.println("Discount Rate: " + (discountRate * 100) + "%");
+        System.out.println("Discount Amount: " + discount);
+        System.out.println("Final Amount to Pay: " + finalAmount);
+
+        scanner.close();
+    }
+}
