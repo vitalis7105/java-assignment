@@ -1,0 +1,27 @@
+import java.text.DecimalFormat;
+
+public class VacationPackageCalculator {
+    
+    public static double calculateTotalCost(double accommodationCost, double mealCost, double activityCost) {
+        return accommodationCost + mealCost + activityCost;
+    }
+    
+    public static void main(String[] args) {
+        double accommodation = 1200.50;
+        double meals = 450.75;
+        double activities = 300.25;
+        
+        
+        double totalCost = calculateTotalCost(accommodation, meals, activities);
+        
+        
+        DecimalFormat df = new DecimalFormat("$#,##0.00");
+        
+        
+        System.out.println("Vacation Package Cost Breakdown:");
+        System.out.println("Accommodation: " + df.format(accommodation));
+        System.out.println("Meals: " + df.format(meals));
+        System.out.println("Activities: " + df.format(activities));
+        System.out.println("Total Cost: " + df.format(totalCost));
+    }
+}
